@@ -19,33 +19,33 @@ Implementar um sistema que gerencia diferentes tipos de animais, seus donos, cui
 
 ## 🧱 Estrutura do Sistema
 
-### 1. Classe Abstrata `Animal`
+### ✅ 1. Classe Abstrata `Animal`
 - Atributos: `nome`, `idade`, `especie`
 - Métodos:
   - `emitirSom()` (abstrato)
   - `alimentar()` (genérico)
 
-### 2. Subclasses: `Cachorro`, `Gato`, `Papagaio`
+### ✅ 2. Subclasses: `Cachorro`, `Gato`, `Papagaio`
 - Herdam de `Animal`
 - Implementam `emitirSom()` com comportamentos distintos
 - Possuem métodos específicos (ex: `buscarBolinha()`)
 
-### 3. Classe `Dono`
+### ✅ 3. Classe `Dono`
 - Atributos: `nome`, `telefone`
 - Associada a um ou mais animais (composição)
 
-### 4. Interface `ICuidadorDeAnimais`
+### ✅ 4. Interface `ICuidadorDeAnimais`
 - Métodos:
   - `cuidar(animal: Animal)`
   - `darBanho(animal: Animal)`
 
-### 5. Classe `Funcionario`
+### ✅ 5. Classe `Funcionario`
 - Implementa `ICuidadorDeAnimais`
 
-### 6. Classe `Veterinario`
+### ✅ 6. Classe `Veterinario`
 - Método: `consultar(animal: Animal)`
 
-### 7. Classe `PetShopService`
+### ✅ 7. Classe `PetShopService`
 - Centraliza as operações do sistema
 - Utiliza Injeção de Dependência para gerenciar cuidadores e veterinários
 
@@ -105,7 +105,7 @@ npm install
 npm start
 ```
 
-📄 Licença
+## 📄 Licença
 
 Este projeto é livre para fins educacionais.
 
