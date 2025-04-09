@@ -7,7 +7,6 @@ export interface IPetShopService {
   cadastrarFuncionario(func: Funcionario):void
   cadastrarVeterinario(vet: Veterinario): void
   cadastrarDono(dono: Dono): void
-  cadastrarAnimal(animal: AnimalType):void
   cadastrarDono(dono: Dono, animal:Animal):void
   adicionarAnimalAoDono(dono: Dono, animal: Animal):void
   banho(animal:Animal, funcionario: Funcionario):void

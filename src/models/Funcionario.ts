@@ -9,9 +9,9 @@ export class Funcionario implements ICuidadorDeAnimais{
     console.log("Cuidando de: ", animal.getNome())
   }
   darBanho(animal: Animal): void {
-    console.log("Dando banho em: ", animal.getNome())
+    console.log("🛁 Dando banho em: ", animal.getNome())
   }
   tosar(animal: Animal): void {
-    console.log("Tosar: ", animal.getNome())
+    console.log("✂️ Tosar: ", animal.getNome())
   }
 }

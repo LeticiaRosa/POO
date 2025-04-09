@@ -6,7 +6,7 @@ export class Papagaio extends Animal {
   }
 
   emitirSom(){
-    console.log("Eu sou um papagaio! Eu sou um papagaio! Eu sou um papagaio!");
+    console.log(`${this.nome}: Eu sou um papagaio! Eu sou um papagaio! Eu sou um papagaio!` );
   }
 
   bicarDedos(){

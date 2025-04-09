@@ -7,7 +7,7 @@ export class Cachorro extends Animal {
   }
 
   emitirSom(){
-    console.log("Au au")
+    console.log(`${this.nome}: Au au`)
   }
 
   buscarBolinha(){

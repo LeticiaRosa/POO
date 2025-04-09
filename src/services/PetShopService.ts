@@ -1,26 +1,27 @@
 import { IPetShopService } from "../interfaces/IPetShop";
 import { Animal, AnimalType } from "../models/Animal";
-import { Cachorro } from "../models/Cachorro";
 import { Dono } from "../models/Dono";
 import { Funcionario } from "../models/Funcionario";
-import { Gato } from "../models/Gato";
-import { Papagaio } from "../models/Papagaio";
 import { Veterinario } from "../models/Veterinario";
 
 export class Services implements IPetShopService{
-  private cuidadores: Funcionario[]= []
-  private veterinarios: Veterinario[]= []
-  private donos: Dono[] = []
+  private donos: Dono[]
+  private veterinarios: Veterinario[]
+  private funcionarios: Funcionario[]
 
-  constructor(){
-    console.log("Pet Shop criado!")
+  constructor(
+    donos: Dono[] = [],
+    veterinarios: Veterinario[] = [],
+    funcionarios: Funcionario[] = []
+  ) {
+    this.donos = donos
+    this.veterinarios = veterinarios
+    this.funcionarios = funcionarios
   }
-  cadastrarAnimal(animal: AnimalType): void {
-    throw new Error("Method not implemented.");
-  }
+
 
   cadastrarFuncionario(func: Funcionario) {
-    this.cuidadores.push(func)
+    this.funcionarios.push(func)
   }
 
   cadastrarVeterinario(vet:Veterinario) {
@@ -75,9 +76,10 @@ export class Services implements IPetShopService{
 
   // Desafio: Criar um método que percorre uma lista de Animal[] e aplica emitirSom() em cada um (exercício de polimorfismo)
   emitirSonDeTodosAnimais(){
+    console.log("\n=== Sons dos animais ===")
     this.donos.forEach(dono => {
       dono.getAnimais().forEach(animal => {
-       animal.emitirSom()
+      `${animal.emitirSom()}`
       })
     })
   }

@@ -54,12 +54,10 @@ function Iniciar() {
     {nome: "Gabriel",
     telefone: "(31)99994-1324"}
   )
-  const PetShopService = new Services()
-  PetShopService.cadastrarFuncionario(Func)
-  PetShopService.cadastrarDono(Gabriel)
-  PetShopService.cadastrarVeterinario(Veterinario1)
-  PetShopService.cadastrarVeterinario(Veterinario2)
-
+  const PetShopService = new Services( 
+    [Gabriel],
+    [Veterinario1, Veterinario2],
+    [Func])
   const Molly = cadastrarAnimal({
     nome: "Molly",
     idade: 3,
@@ -70,23 +68,23 @@ function Iniciar() {
     idade: 2,
     especie: "Gato"
   })
-  const Zeus = cadastrarAnimal ({
+  const Zeus = cadastrarAnimal({
     nome: "Zeus",
     idade: 3,
     especie: "Cachorro"
   })
-
   PetShopService.adicionarAnimalAoDono(Gabriel, Molly)
   PetShopService.adicionarAnimalAoDono(Gabriel, Chandellinho)
   PetShopService.adicionarAnimalAoDono(Gabriel, Zeus)
   console.log("\n=== Animais ===")
   Gabriel.listarAnimais()
-  console.log("\n===============")
+  console.log("\n====== Executando serviços =========")
   PetShopService.banho(Molly,Func)
   PetShopService.tosar(Molly,Func)
   Veterinario1.consultar(Molly)
   Veterinario1.consultar(Chandellinho)
   Veterinario2.consultar(Zeus)
+  console.log("=======================")
   gerarRelatorio(PetShopService,"Todos")
   PetShopService.emitirSonDeTodosAnimais()
 }
