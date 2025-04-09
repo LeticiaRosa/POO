@@ -8,9 +8,9 @@ export type AnimalType = {
 
 export abstract class Animal {
   
-  protected nome: string
-  protected idade: number
-  protected especie: Especie
+  readonly nome: string
+  readonly idade: number
+  readonly especie: Especie
 
   constructor(nome:string, idade:number, especie: Especie){
     this.nome=nome

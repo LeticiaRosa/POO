@@ -1,27 +1,26 @@
 import { Animal } from "./Animal"
 
-export type DonoType = {
+type DonoType = {
   nome: string
   telefone: string
 }
 
 export class Dono {
 
-  nome: string
-  telefone: string
-  animais: Animal[] = []
+  readonly nome: string
+  readonly telefone: string
+  protected animais: Animal[] = []
 
-  constructor(nome: string, telefone: string){
+  constructor({nome, telefone}:DonoType){
     this.nome = nome
     this.telefone = telefone
   }
 
   adicionarAnimal(animal: Animal): void {
-    console.log(animal)
     this.animais.push(animal);
   }
 
-  listarAnimais():void{
+  listarAnimais():void {
     this.animais.forEach((animal: Animal)=>{
       animal.apresentar()
     })
@@ -31,6 +30,10 @@ export class Dono {
     console.log(`👤 Dono: ${this.nome}`);
     console.log(`📞 Telefone: ${this.telefone}`);
     console.log(`📋 Quantidade de animais: ${this.animais.length}`);
+  }
+
+  public getAnimais(): Animal[] {
+    return this.animais;
   }
 
 }
