@@ -1,4 +1,4 @@
-import { IPetShop } from "../interfaces/IPetShop";
+import { IPetShopService } from "../interfaces/IPetShop";
 import { Animal, AnimalType } from "../models/Animal";
 import { Cachorro } from "../models/Cachorro";
 import { Dono, DonoType } from "../models/Dono";
@@ -7,7 +7,7 @@ import { Gato } from "../models/Gato";
 import { Papagaio } from "../models/Papagaio";
 import { Veterinario } from "../models/Veterinario";
 
-export class Services implements IPetShop{
+export class Services implements IPetShopService{
   constructor(){
     console.log("Serviço criado!")
   }

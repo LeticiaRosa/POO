@@ -3,7 +3,7 @@ import { Dono } from "../models/Dono";
 import { Funcionario } from "../models/Funcionario";
 import { Veterinario } from "../models/Veterinario";
 
-export interface IPetShop {
+export interface IPetShopService {
   cadastrarFuncionario():void
   cadastrarVeterinario(veterinario: Veterinario): void
   cadastrarAnimal(animal: AnimalType):void
