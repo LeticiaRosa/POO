@@ -45,7 +45,10 @@ Implementar um sistema que gerencia diferentes tipos de animais, seus donos, cui
 ### ✅ 6. Classe `Veterinario`
 - Método: `consultar(animal: Animal)`
 
-### ✅ 7. Classe `PetShopService`
+### ✅ 7. Classe `IPetShop`
+- Definição um contrato para PetShopService
+
+### ✅ 8. Classe `PetShopService`
 - Centraliza as operações do sistema
 - Utiliza Injeção de Dependência para gerenciar cuidadores e veterinários
 
@@ -77,6 +80,8 @@ src/
   - Donos cadastrados
   - Quantidade de atendimentos por veterinário
 - Criar um método que percorre uma lista de `Animal[]` e aplica `emitirSom()` em cada um (exercício de polimorfismo)
+- Testes Automatizados
+  - Criar uma pasta tests/ com testes unitários básicos para Funcionario, Veterinario e PetShopService usando vitest ou jest.
 
 ## 🚧 Em desenvolvimento...
 
@@ -100,9 +105,12 @@ git clone https://github.com/leticiaRosa/petshop-poo-ts.git
 npm install
 ```
 
-3. Execute o projeto:
+3. Execute o projeto com tsx:
+O `tsx` é uma ferramenta moderna que permite executar arquivos TypeScript diretamente no Node.js, sem precisar compilar antes.
+Ele é uma alternativa leve e prática ao ts-node, muito usado em desenvolvimento moderno, especialmente com: Projetos em Node.js + TypeScript!
+
 ```bash
-npm start
+npm run dev
 ```
 
 ## 📄 Licença
