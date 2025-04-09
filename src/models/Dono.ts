@@ -17,11 +17,10 @@ export class Dono {
   }
 
   adicionarAnimal(animal: Animal): void {
-    console.log(animal)
     this.animais.push(animal);
   }
 
-  listarAnimais():void{
+  listarAnimais():void {
     this.animais.forEach((animal: Animal)=>{
       animal.apresentar()
     })
@@ -31,6 +30,10 @@ export class Dono {
     console.log(`👤 Dono: ${this.nome}`);
     console.log(`📞 Telefone: ${this.telefone}`);
     console.log(`📋 Quantidade de animais: ${this.animais.length}`);
+  }
+
+  public getAnimais(): Animal[] {
+    return this.animais;
   }
 
 }
