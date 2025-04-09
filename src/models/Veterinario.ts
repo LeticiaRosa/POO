@@ -1,10 +1,9 @@
 import { Animal } from "./Animal";
 
 export class Veterinario {
-  protected qtdAtendimentos: number
+  protected qtdAtendimentos: number = 0
 
   constructor(){
-    this.qtdAtendimentos = 0
     console.log("Veterinário cadastrado!")
   }
 

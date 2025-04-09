@@ -7,9 +7,9 @@ type DonoType = {
 
 export class Dono {
 
-  nome: string
-  telefone: string
-  animais: Animal[] = []
+  readonly nome: string
+  readonly telefone: string
+  protected animais: Animal[] = []
 
   constructor({nome, telefone}:DonoType){
     this.nome = nome

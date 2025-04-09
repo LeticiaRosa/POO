@@ -1,4 +1,4 @@
-import { IPetShopService } from "../interfaces/IPetShop";
+import { IPetShopService } from "../interfaces/IPetShopService";
 import { Animal, AnimalType } from "../models/Animal";
 import { Dono } from "../models/Dono";
 import { Funcionario } from "../models/Funcionario";
@@ -32,7 +32,6 @@ export class Services implements IPetShopService{
     this.donos.push(dono);
   }
 
-  
   adicionarAnimalAoDono(dono: Dono, animal: Animal):void{
     dono.adicionarAnimal(animal)
   }
@@ -45,7 +44,6 @@ export class Services implements IPetShopService{
   }
 
   // Desafio: Criar um método para gerar um relatório com: Total de animais
-
   totalDeAnimais(): number {
     return this.donos.reduce((total, dono) => total + dono.getAnimais().length, 0);
   }

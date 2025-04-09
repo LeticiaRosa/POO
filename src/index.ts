@@ -1,5 +1,5 @@
 import { Services } from "./services/PetShopService"
-import { AnimalType } from "./models/Animal"
+import { Animal, AnimalType } from "./models/Animal"
 import { Veterinario } from "./models/Veterinario"
 import { Funcionario } from "./models/Funcionario"
 import { Dono } from "./models/Dono"
