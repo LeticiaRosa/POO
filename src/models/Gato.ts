@@ -1,5 +1,5 @@
 class Gato extends Animal{
-  constructor (name: string, idade:number, especie: Especie){
+  constructor (name: string, idade:number){
     super(name,idade,"Gato")
   }
 

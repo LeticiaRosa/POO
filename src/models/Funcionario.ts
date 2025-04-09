@@ -1,11 +1,11 @@
 import { ICuidadorDeAnimais } from "../interfaces/ICuidadorDeAnimais";
 
-class Funcionario implements ICuidadorDeAnimais{
+export class Funcionario implements ICuidadorDeAnimais{
+  constructor(){}
   cuidar(animal: Animal): void {
     console.log("Cuidando do ", animal.getNome)
   }
   darBanho(animal: Animal): void {
-    console.log("Danndo banho no ", animal.getNome)
-
+    console.log("Dando banho no ", animal.getNome)
   }
 }

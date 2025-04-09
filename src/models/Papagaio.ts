@@ -1,5 +1,5 @@
 class Papagaio extends Animal {
-  constructor(nome:string, idade:number, especie: Especie){
+  constructor(nome:string, idade:number){
     super(nome, idade, "Passaro");
   }
 
