@@ -1,6 +1,6 @@
 class Gato extends Animal{
   constructor (name: string, idade:number, especie: Especie){
-    super(name,idade,especie)
+    super(name,idade,"Gato")
   }
 
   emitirSom(){

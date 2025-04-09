@@ -1,7 +1,7 @@
 class Cachorro extends Animal {
 
   constructor (name: string, idade:number, especie: Especie){
-    super(name,idade,especie)
+    super(name,idade,"Cachorro")
   }
 
   emitirSom(){
