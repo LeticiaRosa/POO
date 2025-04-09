@@ -1,12 +1,18 @@
 type Especie = "Cachorro" | "Gato" | "Passaro"
 
-abstract class Animal {
+export type AnimalType = {
+  nome: string
+  idade: number
+  especie: Especie
+}
+
+export abstract class Animal {
   
   protected nome: string
   protected idade: number
   protected especie: Especie
 
-  constructor(nome:string,idade:number, especie: Especie){
+  constructor(nome:string, idade:number, especie: Especie){
     this.nome=nome
     this.idade=idade
     this.especie=especie
@@ -14,6 +20,14 @@ abstract class Animal {
 
   getNome():string{
     return this.nome
+  }
+
+  getIdate():number{
+    return this.idade
+  }
+
+  getEspecie():string{
+    return this.especie
   }
 
   abstract emitirSom():void

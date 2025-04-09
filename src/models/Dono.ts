@@ -1,4 +1,11 @@
-class Dono {
+import { Animal } from "./Animal"
+
+export type DonoType = {
+  nome: string
+  telefone: string
+}
+
+export class Dono {
 
   nome: string
   telefone: string
@@ -10,6 +17,7 @@ class Dono {
   }
 
   adicionarAnimal(animal: Animal): void {
+    console.log(animal)
     this.animais.push(animal);
   }
 

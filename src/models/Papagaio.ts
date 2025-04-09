@@ -1,4 +1,6 @@
-class Papagaio extends Animal {
+import { Animal } from "./Animal";
+
+export class Papagaio extends Animal {
   constructor(nome:string, idade:number){
     super(nome, idade, "Passaro");
   }
