@@ -8,14 +8,37 @@ Implementar um sistema que gerencia diferentes tipos de animais, seus donos, cui
 
 ## 🧠 Conceitos de POO Abordados
 
-✔️ Classes e Objetos  
-✔️ Herança  
-✔️ Abstração  
-✔️ Encapsulamento  
-✔️ Polimorfismo  
-✔️ Interfaces  
-✔️ Composição  
-✔️ Injeção de Dependência
+✔️ **Classes e Objetos**
+
+  São a base da programação orientada a objetos, onde classes definem estruturas e comportamentos, e objetos são instâncias dessas classes.
+  
+✔️ **Herança**
+
+  Permite que uma classe herde atributos e métodos de outra, promovendo reutilização de código e hierarquia.
+  
+✔️ **Abstração**
+
+  Consiste em ocultar detalhes complexos e mostrar apenas as informações essenciais de um objeto.
+  
+✔️ **Encapsulamento**
+
+  É a prática de proteger os dados internos de um objeto, expondo apenas o que for necessário por meio de métodos públicos.
+  
+✔️ **Polimorfismo**
+
+  Habilidade de objetos de diferentes classes responderem de maneira distinta a uma mesma chamada de método.
+  
+✔️ **Interfaces**
+
+  Definem contratos que uma classe deve seguir, garantindo a implementação de determinados métodos e propriedades.
+  
+✔️ **Composição**
+
+  Relação onde uma classe é formada por outras, promovendo reutilização e modularidade sem herança direta.
+  
+✔️ **Injeção de Dependência**
+
+  Técnica que permite fornecer objetos prontos para uma classe ao invés dela instanciar por conta própria, facilitando testes e manutenção.
 
 ## 🧱 Estrutura do Sistema
 
@@ -50,7 +73,6 @@ Implementar um sistema que gerencia diferentes tipos de animais, seus donos, cui
 - Métodos:
   - `cadastrarFuncionario()`
   - `cadastrarVeterinario(veterinario: Veterinario)`
-  - `cadastrarAnimal(animal: AnimalType)`
   - `cadastrarDono(dono: Dono, animal:Animal)`
   - `adicionarAnimalAoDono(dono: Dono, animal: Animal)`
   - `banho(animal:Animal, funcionario: Funcionario)`
