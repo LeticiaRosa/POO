@@ -146,5 +146,5 @@ npm run dev
 
 ## 📄 Licença
 
-Este projeto é livre para fins educacionais.
+Este projeto foi desenvolvido e executado por Letícia Rosa para fins educacionais!
 
