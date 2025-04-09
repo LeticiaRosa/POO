@@ -1,46 +1,37 @@
 import { IPetShopService } from "../interfaces/IPetShop";
 import { Animal, AnimalType } from "../models/Animal";
 import { Cachorro } from "../models/Cachorro";
-import { Dono, DonoType } from "../models/Dono";
+import { Dono } from "../models/Dono";
 import { Funcionario } from "../models/Funcionario";
 import { Gato } from "../models/Gato";
 import { Papagaio } from "../models/Papagaio";
 import { Veterinario } from "../models/Veterinario";
 
 export class Services implements IPetShopService{
-  private donos: Dono[] = [];
-  private veterinarios: Veterinario[] = [];
+  private cuidadores: Funcionario[]= []
+  private veterinarios: Veterinario[]= []
+  private donos: Dono[] = []
 
   constructor(){
     console.log("Pet Shop criado!")
   }
-
-  cadastrarFuncionario(): Funcionario {
-    return new Funcionario()
+  cadastrarAnimal(animal: AnimalType): void {
+    throw new Error("Method not implemented.");
   }
 
-  cadastrarVeterinario(): Veterinario {
-    const novoVeterinario = new Veterinario()
-    this.veterinarios.push(novoVeterinario)
-    return novoVeterinario
+  cadastrarFuncionario(func: Funcionario) {
+    this.cuidadores.push(func)
   }
-  cadastrarAnimal({nome,idade,especie}: AnimalType): Cachorro | Gato | Papagaio {
-    switch (especie) {
-      case "Cachorro":
-        return new Cachorro(nome, idade)
-      case "Gato":
-        return new Gato(nome, idade)
-      case "Passaro":
-        return new Papagaio(nome, idade)
-    }
+
+  cadastrarVeterinario(vet:Veterinario) {
+    this.veterinarios.push(vet)
   }
+
+  cadastrarDono(dono: Dono) {
+    this.donos.push(dono);
+  }
+
   
-  cadastrarDono({nome,telefone}: DonoType): Dono {
-    const NovoDono =  new Dono(nome,telefone)
-    this.donos.push(NovoDono);
-    return NovoDono
-  }
-
   adicionarAnimalAoDono(dono: Dono, animal: Animal):void{
     dono.adicionarAnimal(animal)
   }

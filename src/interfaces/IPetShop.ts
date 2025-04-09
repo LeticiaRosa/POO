@@ -4,8 +4,9 @@ import { Funcionario } from "../models/Funcionario";
 import { Veterinario } from "../models/Veterinario";
 
 export interface IPetShopService {
-  cadastrarFuncionario():void
-  cadastrarVeterinario(veterinario: Veterinario): void
+  cadastrarFuncionario(func: Funcionario):void
+  cadastrarVeterinario(vet: Veterinario): void
+  cadastrarDono(dono: Dono): void
   cadastrarAnimal(animal: AnimalType):void
   cadastrarDono(dono: Dono, animal:Animal):void
   adicionarAnimalAoDono(dono: Dono, animal: Animal):void

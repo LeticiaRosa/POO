@@ -1,6 +1,6 @@
 import { Animal } from "./Animal"
 
-export type DonoType = {
+type DonoType = {
   nome: string
   telefone: string
 }
@@ -11,7 +11,7 @@ export class Dono {
   telefone: string
   animais: Animal[] = []
 
-  constructor(nome: string, telefone: string){
+  constructor({nome, telefone}:DonoType){
     this.nome = nome
     this.telefone = telefone
   }
