@@ -1,6 +1,8 @@
-class Gato extends Animal{
-  constructor (name: string, idade:number, especie: Especie){
-    super(name,idade,especie)
+import { Animal } from "./Animal"
+
+export class Gato extends Animal{
+  constructor (name: string, idade:number){
+    super(name,idade,"Gato")
   }
 
   emitirSom(){
