@@ -2,14 +2,18 @@ type Especie = "Cachorro" | "Gato" | "Passaro"
 
 abstract class Animal {
   
-  private nome: string
-  private idade: number
-  private especie: Especie
+  protected nome: string
+  protected idade: number
+  protected especie: Especie
 
   constructor(nome:string,idade:number, especie: Especie){
     this.nome=nome
     this.idade=idade
     this.especie=especie
+  }
+
+  getNome():string{
+    return this.nome
   }
 
   abstract emitirSom():void
