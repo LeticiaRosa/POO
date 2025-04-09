@@ -1,0 +1,15 @@
+{
+  "name": "petshop-poo-ts",
+  "version": "1.0.0",
+  "description": "Este projeto é um desafio de Programação Orientada a Objetos (POO), desenvolvido com JavaScript/TypeScript, para simular o funcionamento de um sistema de gerenciamento de um Pet Shop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
