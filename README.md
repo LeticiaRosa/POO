@@ -45,8 +45,16 @@ Implementar um sistema que gerencia diferentes tipos de animais, seus donos, cui
 ### ✅ 6. Classe `Veterinario`
 - Método: `consultar(animal: Animal)`
 
-### ✅ 7. Classe `IPetShop`
+### ✅ 7. Interface `IPetShopService`
 - Definição um contrato para PetShopService
+- Métodos:
+  - `cadastrarFuncionario()`
+  - `cadastrarVeterinario(veterinario: Veterinario)`
+  - `cadastrarAnimal(animal: AnimalType)`
+  - `cadastrarDono(dono: Dono, animal:Animal)`
+  - `adicionarAnimalAoDono(dono: Dono, animal: Animal)`
+  - `banho(animal:Animal, funcionario: Funcionario)`
+  - `tosar(animal:Animal, funcionario:Funcionario)`
 
 ### ✅ 8. Classe `PetShopService`
 - Centraliza as operações do sistema
@@ -65,6 +73,7 @@ src/
 │
 ├── interfaces/
 │   └── ICuidadorDeAnimais.ts
+│   └── IPetShopService.ts
 │
 ├── services/
 │   └── PetShopService.ts
